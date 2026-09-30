@@ -1,0 +1,29 @@
+1
+00:00:01,100 --> 00:00:05,480
+Hello, my name is Biru Sital and I study
+smart automation at the Metropolitan
+
+2
+00:00:05,480 --> 00:00:07,860
+University of Applied
+Sciences in Helsinki.
+
+3
+00:00:08,820 --> 00:00:11,220
+This recording is a test
+for my software editor.
+
+4
+00:00:11,780 --> 00:00:17,260
+It uses the Whispers-P's recommendation
+model and it saves the software itself
+
+5
+00:00:17,260 --> 00:00:20,600
+as SIT and webBTT files.
+
+6
+00:00:21,280 --> 00:00:26,020
+Today is Wednesday,
+30th of September, 2026.
+

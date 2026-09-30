@@ -1,0 +1,399 @@
+1
+00:00:00,530 --> 00:00:03,630
+Lomati, this is my face
+anonymizer mini project.
+
+2
+00:00:04,370 --> 00:00:08,610
+For applied air programming, it detects
+faces in images, video files and a live
+
+3
+00:00:08,610 --> 00:00:12,570
+webcam and anonymizes them with blur,
+pixelation or a solid mask.
+
+4
+00:00:13,090 --> 00:00:17,350
+It uses the media file face detector with
+the blaze face model, which is free and
+
+5
+00:00:17,350 --> 00:00:21,810
+open source. Plus OpenCV, the core and
+full report are in this github rip.
+
+6
+00:00:24,210 --> 00:00:28,290
+Now I'll show you my code
+and setup in the VES code.
+
+7
+00:00:28,290 --> 00:00:29,390
+This
+
+8
+00:00:32,170 --> 00:00:36,290
+is the project folder,
+anonymizer.py is the main application,
+
+9
+00:00:37,110 --> 00:00:42,110
+the model file is in the model folder
+and requirements.txt list the libraries.
+
+10
+00:00:42,790 --> 00:00:47,870
+My test photos are in the test media, they
+stay on my computer and are not uploaded
+
+11
+00:00:47,870 --> 00:00:49,890
+to github because they show real faces.
+
+12
+00:00:50,550 --> 00:00:52,530
+The gitignore file makes sure of that.
+
+13
+00:00:53,210 --> 00:00:58,210
+Now I'll open my code, it's a long
+code but yeah it's in the github.
+
+14
+00:00:58,450 --> 00:01:03,200
+The program also have a here
+base with all the settings.
+
+15
+00:01:06,080 --> 00:01:07,080
+Now
+
+16
+00:01:09,750 --> 00:01:13,290
+I'll get to the testing
+part, the still images.
+
+17
+00:01:13,650 --> 00:01:17,990
+I'll process the whole test folder with
+all three methods and a debug view.
+
+18
+00:01:18,310 --> 00:01:24,130
+The test set covers one face, two faces,
+no face, a side view, sunglasses and a hat,
+
+19
+00:01:24,630 --> 00:01:30,050
+dark lightning and a small face for
+far away with bright light behind.
+
+20
+00:01:42,360 --> 00:01:47,720
+Every file will be processed
+and it will come to my output.
+
+21
+00:01:54,070 --> 00:01:59,010
+It also includes the no face, no face
+
+22
+00:01:59,010 --> 00:02:01,290
+photo with dent crash.
+
+23
+00:02:02,270 --> 00:02:05,870
+Now I'll show one of these,
+I'll select multiple faces.
+
+24
+00:02:09,070 --> 00:02:14,850
+Both faces found 0.96 each,
+green is what the AI detected with its
+
+25
+00:02:14,850 --> 00:02:19,890
+confidence score, red is the
+area that gets anomalized.
+
+26
+00:02:20,130 --> 00:02:25,990
+I add 24% padding because the detector
+box is tight and would live here, ears
+
+27
+00:02:25,990 --> 00:02:27,130
+and jaw visible.
+
+28
+00:02:29,090 --> 00:02:35,050
+I'll also open these ones, multiple faces,
+blur.png, it's blur, multiple faces,
+
+29
+00:02:35,450 --> 00:02:38,370
+pixelate and multiple faces, max.
+
+30
+00:02:40,880 --> 00:02:46,580
+The three methods, the max is the more
+literally irreversible one because it
+
+31
+00:02:46,580 --> 00:02:51,900
+deletes the pixels, blur and pixelation
+
+32
+00:02:52,640 --> 00:02:58,320
+reduce the risk but are not a. Now I'll
+open few others, this one side look,
+
+33
+00:03:01,680 --> 00:03:04,380
+side view is still detected with 0.89,
+
+34
+00:03:05,520 --> 00:03:07,460
+I'll go to the sunglasses hat,
+
+35
+00:03:13,590 --> 00:03:17,490
+sunglasses and a hat is
+still detected with 0.94.
+
+36
+00:03:18,960 --> 00:03:24,160
+Now I'll go to the dark,
+debug low light 0.97
+
+37
+00:03:24,160 --> 00:03:25,500
+far
+
+38
+00:03:28,510 --> 00:03:29,810
+backlit,
+
+39
+00:03:30,670 --> 00:03:36,470
+I think this is the hardest case
+far away and backlit, only 0.46 just
+
+40
+00:03:36,470 --> 00:03:39,410
+above my threshold of 0.4 and the box is
+
+41
+00:03:40,210 --> 00:03:45,990
+imprecise. With the padded area it still
+covers the, these scores are high partly
+
+42
+00:03:45,990 --> 00:03:47,450
+because of the zoom tiles.
+
+43
+00:03:47,810 --> 00:03:53,210
+Before I added tiling the same photos
+score lower, for example sunglasses it was
+
+44
+00:03:53,210 --> 00:03:55,810
+only 0.67 and
+
+45
+00:03:57,320 --> 00:04:02,980
+for the no face, the image it is
+still unchanged and no grass.
+
+46
+00:04:04,280 --> 00:04:08,940
+Now I'll do the short comparison with the
+blur strength, the blur strength matters
+
+47
+00:04:08,940 --> 00:04:13,560
+and here I'll show you one weak blur is
+
+48
+00:04:18,230 --> 00:04:19,230
+here,
+
+49
+00:04:20,620 --> 00:04:23,040
+weak blur, single face.
+
+50
+00:04:27,440 --> 00:04:33,320
+With weak blur I'm still recognizable,
+here glasses face is
+
+51
+00:04:33,320 --> 00:04:39,020
+with the default strong blur,
+nothing identifying is left so blur
+
+52
+00:04:39,020 --> 00:04:41,160
+is not automatically anonymous.
+
+53
+00:04:42,690 --> 00:04:48,590
+Now media pipes default settings
+threshold 0.5 and no tiling on on
+
+54
+00:04:48,590 --> 00:04:50,110
+on the far four,
+
+55
+00:05:06,740 --> 00:05:07,940
+this is the one,
+
+56
+00:05:10,730 --> 00:05:16,550
+zero faces my faces is completely
+visible that is a false
+
+57
+00:05:16,550 --> 00:05:22,210
+negative, the most dangerous error for
+privacy with my settings, this space score 0
+
+58
+00:05:22,210 --> 00:05:28,790
+.46 below the default threshold of 0.5
+which is why I lower the threshold to 0 .4.
+
+59
+00:05:31,580 --> 00:05:35,640
+Now for the video first without tiling for
+
+60
+00:06:12,980 --> 00:06:18,440
+the two people no tiles only one and
+the two of 140 frames has a detection,
+
+61
+00:06:19,480 --> 00:06:25,140
+in this version my friends face is visible
+in several moments because the face
+
+62
+00:06:25,140 --> 00:06:28,420
+are small, the short range is range model,
+
+63
+00:06:29,640 --> 00:06:35,500
+shrinks the frame to 128 by
+128 pixel my fix, the frame is
+
+64
+00:06:35,500 --> 00:06:41,440
+also split into four zoomed in tiles,
+lets watch it live detection on
+
+65
+00:06:41,440 --> 00:06:43,300
+the left result on the,
+
+66
+00:06:52,440 --> 00:06:57,420
+now you can see 1.37 of 140 frames,
+
+67
+00:07:10,410 --> 00:07:16,250
+here you can see 1.37 of 140 frames
+have a detection the other three are
+
+68
+00:07:16,250 --> 00:07:22,210
+when we both have our backs turned,
+you can also see a false positive the cartoon on
+
+69
+00:07:22,210 --> 00:07:27,790
+my t-shirt is sometimes detected as a face
+for privacy blurring too much is better
+
+70
+00:07:27,790 --> 00:07:34,400
+than two liter boxes are also kept
+for five frames which stops flicker
+
+71
+00:07:35,930 --> 00:07:38,510
+and finally the live webcam,
+
+72
+00:08:05,560 --> 00:08:11,400
+it runs in real time about 30
+frames per second on a laptop
+
+73
+00:08:11,400 --> 00:08:14,440
+CPU and the face stays
+covered while I move,
+
+74
+00:08:16,200 --> 00:08:21,800
+now the other part error handling, error
+handling or corp image or an unsupported
+
+75
+00:08:21,800 --> 00:08:26,560
+file or a missing file or an invalid
+settings and a camera that doesn't exist,
+
+76
+00:08:29,800 --> 00:08:32,540
+even for
+
+77
+00:08:51,290 --> 00:08:53,690
+the false images,
+
+78
+00:08:54,660 --> 00:08:58,040
+each case gives a clear
+missus and nothing crash,
+
+79
+00:08:59,990 --> 00:09:05,650
+to sum up the app works on images,
+video and webcam handles multiple faces
+
+80
+00:09:05,650 --> 00:09:10,610
+and no face cases and eye cases,
+lighting, pose, distance and
+
+81
+00:09:10,840 --> 00:09:12,440
+occlusion,
+
+82
+00:09:13,460 --> 00:09:19,200
+main limitation very small or fully
+toned faces can still be missed and blur
+
+83
+00:09:19,200 --> 00:09:24,700
+is not guaranteed to be irreversible,
+use the mask for maximum privacy
+
+84
+00:09:24,700 --> 00:09:30,420
+everything runs locally originals are never
+uploaded and my friend concentrated to
+
+85
+00:09:30,420 --> 00:09:35,220
+appear, details test results
+and sources are in the readme on
+
+86
+00:09:35,220 --> 00:09:37,200
+github, thank you
+

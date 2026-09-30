@@ -1,0 +1,25 @@
+1
+00:00:01,380 --> 00:00:07,380
+This is a test with pauses did the
+
+2
+00:00:07,380 --> 00:00:09,300
+subtitle disappeared during the silence
+
+3
+00:00:09,300 --> 00:00:13,680
+yes
+
+4
+00:00:13,680 --> 00:00:19,320
+now I will stay quickly the quick
+
+5
+00:00:19,320 --> 00:00:24,700
+brown fox jumps over the lazy dog and
+the subtitle should be stable thank you
+
+6
+00:00:24,700 --> 00:00:27,720
+thank you
+

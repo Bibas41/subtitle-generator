@@ -1,0 +1,15 @@
+# Virtual environment (everyone creates their own)
+.venv/
+
+# Original recordings contain real voices (personal data) - never upload
+test_media/
+
+# All generated output (selected examples are copied to examples/)
+output/
+
+# Deliberately broken files for error-handling tests
+error_tests/
+
+# Python cache files
+__pycache__/
+*.pyc

@@ -1,0 +1,28 @@
+1
+00:00:02,220 --> 00:00:08,160
+My name is Bebas Duttal and I study smart
+automation at Metropolitan University of
+
+2
+00:00:08,160 --> 00:00:10,040
+Applied Sciences in Helsinki.
+
+3
+00:00:10,780 --> 00:00:13,880
+This recording is a test
+for my subtitle generator.
+
+4
+00:00:14,880 --> 00:00:20,760
+It uses the whisper speech recognition model,
+and it saves the subtitles as SRT and
+
+5
+00:00:20,760 --> 00:00:22,300
+web VTT files.
+
+6
+00:00:23,120 --> 00:00:27,780
+Today is Wednesday,
+the 30th of September, 2026.
+

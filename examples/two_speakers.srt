@@ -1,0 +1,33 @@
+1
+00:00:00,980 --> 00:00:04,680
+Hey, thanks for helping me
+test my subtitles generator
+
+2
+00:00:09,070 --> 00:00:13,750
+Just talk normally the program listens
+and writes everything as subtitles
+
+3
+00:00:16,060 --> 00:00:18,280
+Does it also know who is speaking?
+
+4
+00:00:19,420 --> 00:00:21,700
+No, that's one of the limitations.
+
+5
+00:00:22,020 --> 00:00:25,460
+It only writes the words not
+the names of the speakers
+
+6
+00:00:27,260 --> 00:00:31,810
+Interesting so if we both talk at the
+same time, it probably gets confused.
+
+7
+00:00:33,810 --> 00:00:38,670
+Let's see how it handles that Okay,
+thank you for helping me out
+
