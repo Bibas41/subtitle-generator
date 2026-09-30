@@ -4,7 +4,7 @@ A Python application that converts speech in an **audio or video file** into **t
 
 Built for the *Applied AI Programming (TX00FM14)* course at Metropolia University of Applied Sciences.
 
-**Demo video:** _add link here_
+**Demo video:** https://youtu.be/k7RvRNCK4cc
 
 Example output (`examples/clear_speech_prompt.srt`):
 
